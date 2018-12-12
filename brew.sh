@@ -39,4 +39,4 @@ brew install postman
 # brew install robo-3t 
 
 # Tryout later
-# brew cask install alfred
+brew cask install alfred
