@@ -66,7 +66,6 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 echo "Reveal IP, hostname, OS, etc. when clicking clock in login window"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-
 echo "Disable smart quotes as they’re annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
@@ -78,8 +77,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-
-
 echo "Disable 'natural' (Lion-style) scrolling"
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
@@ -88,8 +85,6 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-
 
 # echo "Use scroll gesture with the Ctrl (^) modifier key to zoom"
 # defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
@@ -103,7 +98,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 echo "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 
 echo "Set measurement units and use metrics"
@@ -114,8 +109,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 echo "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-
 
 echo "Allow quitting via ⌘ + Q; doing so will also hide desktop icons"
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -164,7 +157,6 @@ defaults write com.apple.dock launchanim -bool false
 echo "Speed up Mission Control animations"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-
 echo "Disable Dashboard"
 defaults write com.apple.dashboard mcx-disabled -bool true
 
@@ -187,7 +179,4 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 echo "set system-wide hotkey to show/hide iterm with ^\`"
 defaults write com.googlecode.iterm2 Hotkey -bool true
-
-echo "animate split-terminal dimming"
-defaults write com.googlecode.iterm2 AnimateDimming -bool true
 

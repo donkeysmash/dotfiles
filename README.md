@@ -8,6 +8,10 @@
 
 4. run `installMacOS.sh`
 
+##### Things that are not automated
+System Preference > Keyboard > Input Sources > Check `Automatically switch to a document's input source`
+
+
 
 ### Chrome extensions
 
