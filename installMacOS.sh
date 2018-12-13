@@ -26,7 +26,8 @@ cp vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json
 cp vscode.keybinding.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 echo "importing iTerm2 colorscheme"
-open "shaman-custom.itermcolors"
+# open "shaman-custom.itermcolors"
+open "space-grey-custom.itermcolors"
 
 echo "adding global .gitignore"
 cp .gitignore_global ~/.gitignore_global
