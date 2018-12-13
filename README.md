@@ -19,3 +19,4 @@ System Preference > Keyboard > Input Sources > Check `Automatically switch to a 
 - grammarly
 - onetab
 - dark reader
+- octotree
