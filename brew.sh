@@ -11,6 +11,7 @@ brew install git
 brew install make
 brew install cmake
 
+brew install grep --with-default-names
 brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
