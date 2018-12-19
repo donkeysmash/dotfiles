@@ -2,7 +2,7 @@
 
 1. `xcode-select --install`
 
-2. Run brew.sh
+2. Run `brew.sh`
 
 3. update the shell `chsh -s $(which zsh)`
 
