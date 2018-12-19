@@ -15,6 +15,9 @@ brew install grep --with-default-names
 brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+brew install htop
+brew install tldr
+brew install coreutils
 brew install jq
 
 # Casks
@@ -29,6 +32,7 @@ brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install macvim
 brew cask install aerial
+
 
 # Likely
 brew cask install slack

@@ -1,19 +1,21 @@
 #! /bin/zsh
 
 echo "install oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+export ZSH="${HOME}/.oh-my-zsh"
+git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$ZSH"
+export ZSH_CUSTOM="${ZSH}/custom"
 
 echo "clone zsh: autosuggestions, completions, alias-tips, syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
+git clone https://github.com/djui/alias-tips.git ${ZSH_CUSTOM}/plugins/alias-tips
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
 
 echo "clone Vundle for vim"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "copying files from here to HOME"
-cp blinks-custom.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/
+cp blinks-custom.zsh-theme ${ZSH_CUSTOM}/themes/blinks-custom.zsh-theme
 cp .zshrc ${HOME}/.zshrc
 source ~/.zshrc
 cp .vimrc ${HOME}/.vimrc
@@ -55,14 +57,11 @@ sudo nvram SystemAudioVolume=" "
 echo "Save to disk (not to iCloud) by default"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-
 echo "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-
 echo "Disable the crash reporter"
 defaults write com.apple.CrashReporter DialogType -string "none"
-
 
 echo "Reveal IP, hostname, OS, etc. when clicking clock in login window"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -93,7 +92,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # echo "Follow the keyboard focus while zoomed in"
 # defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
-
 echo "Disable press-and-hold for keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -101,11 +99,9 @@ echo "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
-
 echo "Set measurement units and use metrics"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
-
 
 echo "Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
@@ -116,7 +112,6 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 echo "Disable window animations and Get Info animations"
 defaults write com.apple.finder DisableAllAnimations -bool true
-
 
 echo "Show hidden files by default"
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -180,4 +175,3 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 echo "set system-wide hotkey to show/hide iterm with ^\`"
 defaults write com.googlecode.iterm2 Hotkey -bool true
-
