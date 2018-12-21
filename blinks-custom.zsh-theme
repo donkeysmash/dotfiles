@@ -8,7 +8,7 @@ function _prompt_char() {
   fi
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%B%F{blue}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%B%F{magenta}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{black}%B%F{green}%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
