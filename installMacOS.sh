@@ -27,6 +27,15 @@ echo "copying vscode settings"
 cp vscode.settings.json ~/Library/Application\ Support/Code/User/settings.json
 cp vscode.keybinding.json ~/Library/Application\ Support/Code/User/keybindings.json
 
+echo "installing vscode extensions"
+code --install-extension vscodevim.vim
+
+code --install-extension aaron-bond.better-comments
+code --install-extension eamodio.gitlens
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension PKief.material-icon-theme
+code --install-extension streetsidesoftware.code-spell-checker
+
 echo "importing iTerm2 colorscheme"
 open "shaman-custom.itermcolors"
 # open "space-grey-custom.itermcolors"
