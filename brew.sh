@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
 brew upgrade
@@ -38,7 +38,7 @@ brew cask install aerial
 brew cask install slack
 brew install node
 brew install python
-brew install postman
+brew cask install postman
 
 # Optionals
 # brew install virtualbox
